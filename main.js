@@ -1,9 +1,3 @@
-/*
-Optional functionality to add:
-- parentheses
-- power (^)
-*/
-
 let input = document.querySelector("#input");
 let output = document.querySelector("#output");
 let operators = document.querySelectorAll(".operators");
@@ -18,18 +12,14 @@ function operate(num1, operator, num2) {
             return Number(num1) * Number(num2);
         case '/':
             return Number(num1) / Number(num2);
+        case '^':
+            return Math.pow(Number(num1), Number(num2));
         default:
             console.log("Invalid operator");
             break;
     }
 }
 
-/* 
-Create a function that can take in an array, e.g., ['8', '+', '2', 'x', '4']
-and return the solution
-1. search for PEMDAS order
-2. extract num1, operator, and num2 for the expression
-*/
 function evaluate(arr) {
     console.log(arr);
     let MD = ['x', '/']
@@ -37,11 +27,25 @@ function evaluate(arr) {
 
     if (arr.length > 2) {
         for (let i=0; i<arr.length; i++) {
+            if (arr[i] === "(") {
+                let end = arr.indexOf(")");
+
+                let total = operate(arr[i-1], arr[i], arr[i+1]);
+                arr.splice(i-1, 3, total);
+                return evaluate(arr);
+            }
+        }
+        for (let i=0; i<arr.length; i++) {
+            if (arr[i] === "^") {
+                let total = operate(arr[i-1], arr[i], arr[i+1]);
+                arr.splice(i-1, 3, total);
+                return evaluate(arr);
+            }
+        }
+        for (let i=0; i<arr.length; i++) {
             if (MD.includes(arr[i])) {
                 let total = operate(arr[i-1], arr[i], arr[i+1]);
-                console.log(total);
                 arr.splice(i-1, 3, total);
-                console.log(arr);    
                 return evaluate(arr);
             }
         }
@@ -102,8 +106,8 @@ function resetDisplay (e) {
 
 let buttons = Array.from(document.querySelectorAll("button"));
 buttons.pop(); // remove the "=" button 
-buttons.splice(12,1); // remove the "." button
 buttons.splice(0,2); // remove the "clear" and "delete" buttons
+buttons.splice(13,1); // remove the "." button
 buttons.forEach(button => {
     button.addEventListener("click", displayInput);
 })
