@@ -1,0 +1,111 @@
+body {
+    text-align: center;
+}
+
+#frame {
+    display: inline-block;
+    background-color: #1C262F;
+    margin-top: 15px;
+    border-radius: 15px;
+    box-shadow: 3px 3px 5px black;
+    box-shadow: inset 0px 0px 8px white;
+    padding: 30px 30px;
+}
+
+#frame-top {
+    display: inline-block;
+    background-color: #EBE7E6;
+    height: 180px;
+    width: 300px;
+    box-shadow: inset 0px 0px 3px black;
+    font-family: 'Cinzel', serif;
+    font-size: 13px;
+}
+
+#frame-top h1 {
+    display: inline-block;
+    font-family: 'Oswald', sans-serif;
+    font-weight: 200;
+    font-size: 30px;
+    margin: 20px 0px 0px 0px;
+}
+
+#frame-top h1 span{
+    font-weight: 700;
+}
+
+#screen {
+    display: inline-block;
+    background-color: #64786C;
+    height: 80px;
+    width: 250px;
+    margin: 10px auto;
+    box-shadow: inset 0px 0px 7px black;
+}
+
+#screen p {
+    font-family: 'Rationale', sans-serif;
+    font-size: 30px;
+    margin: 3px 10px;
+    text-align: right;
+}
+
+#advanced-buttons {
+    display: block;
+    margin-top: 15px;
+}
+
+.advanced {
+    background-color: black;
+    color: white;
+    font-family: 'Oswald', sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    border-radius: 4px;
+    border: 0px solid black;
+    box-shadow: 3px 3px 3px black;
+    width: 45px;
+    height: 25px;
+    padding: 0px;
+}
+
+#digit-buttons {
+    display: inline-block;
+    width: 180px;
+    margin-top: 12px;
+}
+
+.digits {
+    background-color: #e3e6e8;
+    color: black;
+    border-radius: 6px;
+    border: 0px;
+    margin: 3px 3px;
+    box-shadow: 3px 3px 3px black;
+    font-family: 'Ubuntu', sans-serif;
+    font-size: 22px;
+    width: 45px;
+    height: 35px;
+}
+
+#zero {
+    width: 99px;
+}
+
+#operator-buttons {
+    display: inline-block;
+    width: 60px;
+}
+
+.operators {
+    background-color: #536693;
+    color: white;
+    border-radius: 6px;
+    border: 0px;
+    margin: 3px 3px;
+    box-shadow: 3px 3px 3px black;
+    font-family: 'Ubuntu', sans-serif;
+    font-size: 22px;
+    width: 45px;
+    height: 35px;
+}
