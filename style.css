@@ -56,14 +56,14 @@ body {
 }
 
 .advanced {
-    background-color: #090b10;
+    background-color: hsl(223, 28%, 8%);
     color: white;
     font-family: 'Oswald', sans-serif;
     font-weight: 400;
     font-size: 16px;
     border-radius: 4px;
     border: 0px solid black;
-    box-shadow: 3px 3px 3px black;
+    box-shadow: 2px 2px 0px hsl(223, 28%, 4%);
     width: 50px;
     height: 25px;
     padding: 0px;
@@ -86,7 +86,7 @@ body {
     border-radius: 6px;
     border: 0px;
     margin: 3px 3px;
-    box-shadow: 3px 3px 3px black;
+    box-shadow: 2px 2px 0px #abb4ba;
     font-family: 'Ubuntu', sans-serif;
     font-size: 22px;
     width: 50px;
@@ -108,7 +108,7 @@ body {
     border-radius: 6px;
     border: 0px;
     margin: 3px 3px;
-    box-shadow: 3px 3px 3px black;
+    box-shadow: 2px 2px 0px #374462;
     font-family: 'Ubuntu', sans-serif;
     font-size: 22px;
     width: 50px;
