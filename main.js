@@ -156,6 +156,7 @@ window.addEventListener("keydown", (e) => {
         } else {
         input.textContent += keyInput;
         }
+        e.preventDefault();
     }
 });
 window.addEventListener("keydown", (e) => {
